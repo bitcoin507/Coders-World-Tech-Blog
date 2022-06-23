@@ -1,0 +1,15 @@
+{
+  "name": "04-blog-project",
+  "version": "1.0.0",
+  "description": "creating a blog website using node and express as back end server",
+  "main": "blog.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Don Avworo",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1"
+  }
+}
