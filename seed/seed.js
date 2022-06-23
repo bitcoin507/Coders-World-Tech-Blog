@@ -20,7 +20,7 @@ const sequelize = require('../config/connection'); //import the connection to be
 //async function to seed the database
 async function seed() {  //async function to seed the database
     try {
-        await sequelize.sync({force: true}); //sync the database
+        await sequelize.sync({force: true}); //sync the database 
         const category = await category.bulkCreate(cattegorySeed); //insert the data from the json file into the database
         const comment = await comment.bulkCreate(commentSeed); //insert the data from the json file into the database
         const user = await user.bulkCreate(userSeed); //insert the data from the json file into the database
