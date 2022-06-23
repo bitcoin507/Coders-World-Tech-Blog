@@ -1,7 +1,7 @@
-const { UUIDV4, Model, DataTypes, STRING } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Category extends Model {}
+class Category extends Model { }
 
 Category.init(
   {
