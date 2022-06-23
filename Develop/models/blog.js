@@ -19,7 +19,7 @@ blog.init(
     content: {
       type: DataTypes.STRING,
       allowNull: false,
-      foreignKey:
+      foreignKey: 'user_id'
     },
     author_id: {
       type: DataTypes.INTEGER,
