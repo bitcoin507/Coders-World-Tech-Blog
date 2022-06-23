@@ -3,6 +3,8 @@
 const categorySeed = require('./seed/cattegorySeedData.json');
 const commentSeed = require('./seed/commentSeedData.json');
 const userSeed = require('./seed/userSeedData.json');
+const blogSeed = require ('./seed/blogSeedData.json');
+const indexSeed = require('./seed/indexSeedData.json');
 
 
 //test this function to see if it works
