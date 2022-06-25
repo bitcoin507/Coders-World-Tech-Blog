@@ -19,6 +19,10 @@ Post.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
+    image: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
     author_id: {
       type: DataTypes.INTEGER,
       allowNull: false,

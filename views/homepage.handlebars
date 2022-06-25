@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="leftcolumn">
+
+        {{#each posts as |post|}}
+        <div class="card">
+            <h2>{{post.title}}</h2>
+            <h5>{{post.created_at}}</h5>
+            <img class="banner" src="./assets/images/{{post.image}}">
+            <p>Some text..</p>
+            <p>{{post.content}}</p>
+            <a href="#">READ MORE</a>
+        </div>
+        {{/each}}
+    </div>
+    <div class="rightcolumn">
+        <div class="card">
+            <h2>About Us</h2>
+            <img src="./assets/images/autor.jfif" Image</div>
+            <p>Welcome to the Coder's World Community. We love coding.Fell free to submit your article for review.
+            </p>
+        </div>
+        <div class="card">
+            <h3>Read our most popular blogs.</h3>
+            <a href="#">CSS IN 2022<img class="minibanner" src="./assets/images/css2.jfif" <br></a>
+            <a href="#">Learn to code in 24 hours<img class="minibanner" src="./assets/images/how to code.jfif" <br></a>
+            <a href="#">Learn SQL<img class="minibanner" src="./assets/images/sql2.png" <br></a>
+        </div>
+
+    </div>
+</div>
