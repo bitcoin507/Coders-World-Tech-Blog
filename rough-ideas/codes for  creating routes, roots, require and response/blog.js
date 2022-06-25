@@ -8,14 +8,14 @@ const app = express();
 
 //the body parser is a dependency that is used to parse the body of the request and store it in a variable called bodyParser (install: npm i body-parser)
 app.use(bodyParser.text({extended: true}));     //use the body parser to parse the body of the request app.use is used to add middleware to the express application
-                                                 //app.use is used to 
+                                                 //app.use is used to  
                                                  //extended: true is used to parse the body of the request
                                                  //middleware is a function that is executed before the request is handled by the route handler
                                                  //the request object is passed to the middleware function
                                                  //the response object is passed to the middleware function
 
 
-// create a route for the root path and set it to a function that returns a string (the response) that says hello world
+// create a route for the root path and set it to a function that returns a string (the response) that says 
 app.get('/', (req, res) => { //req is the request and res is the response that allows us to send data back to the client
     //console.log('Hello World');
     // res.send('Hello World'); //send a response to the client (the browser) that says hello world fetching the data from the local file path
