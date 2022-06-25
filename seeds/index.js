@@ -1,9 +1,11 @@
+const { User, Category, Comment, Blog } = require('../models');
+
 // variables for the seed
 //import the data from the json file to be used in the database using fs module to read the file 
 const categorySeed = require('./categorySeedData.json');
-const commentSeed = require('./seed/commentSeedData.json');
 const userSeed = require('./userSeedData.json');
-const blogSeed = require('./blogSeedData.json');
+//const blogSeed = require('./blogSeedData.json');
+//const commentSeed = require('./commentSeedData.json');
 
 //test this function to see if it works
 //const { title, comment } = commentSeed[0]; //get the title and comment from the commentSeedData.json file and deconstruct the object
@@ -16,17 +18,19 @@ const sequelize = require('../config/connection'); //import the connection to be
 //async function to seed the database
 async function seed() {  //async function to seed the database
     try {
-        await sequelize.sync({force: true}); //sync the database 
-        const category = await category.bulkCreate(categorySeed); //insert the data from the json file into the database
-        const comment = await comment.bulkCreate(commentSeed); //insert the data from the json file into the database
-        const user = await user.bulkCreate(userSeed); //insert the data from the json file into the database
-        const blog = await blog.bulkCreate(blogSeed); //insert the data from the json file into the database
+        await sequelize.sync({ force: true }); //sync the database 
+        const categories = await Category.bulkCreate(categorySeed); //insert the data from the json file into the database
+        const user = await User.bulkCreate(userSeed); //insert the data from the json file into the database
+
+        //const comment = await comment.bulkCreate(commentSeed); //insert the data from the json file into the database
+        //const blog = await blog.bulkCreate(blogSeed); //insert the data from the json file into the database
         //const comment = await comment.bulkCreate(commentSeed); //insert the data from the json file into the database
     }
     catch (err) { // if there is an error, console log the error
         console.log(err);
     }
 
+    /*
     //create a new post
     const post = await post.create({
         title: 'My first post',
@@ -42,9 +46,11 @@ async function seed() {  //async function to seed the database
         user_id: 1
     }); //end of async function
 
-    //console log the post and comment
+        //console log the post and comment
     console.log(post);
     console.log(comment);
+*/
+
 
     process.exit(0);
 }
