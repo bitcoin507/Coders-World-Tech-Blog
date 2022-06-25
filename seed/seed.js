@@ -16,17 +16,12 @@ const sequelize = require('../config/connection'); //import the connection to be
 //async function to seed the database
 async function seed() {  //async function to seed the database
     try {
-<<<<<<< HEAD
         await sequelize.sync({force: true}); //sync the database 
-        const category = await category.bulkCreate(cattegorySeed); //insert the data from the json file into the database
-        const comment = await comment.bulkCreate(commentSeed); //insert the data from the json file into the database
-=======
-        await sequelize.sync({ force: true }); //sync the database
         const category = await category.bulkCreate(categorySeed); //insert the data from the json file into the database
->>>>>>> 9516ae7c78697c98a7187c7c92a221814cae5167
+        const comment = await comment.bulkCreate(commentSeed); //insert the data from the json file into the database
         const user = await user.bulkCreate(userSeed); //insert the data from the json file into the database
         const blog = await blog.bulkCreate(blogSeed); //insert the data from the json file into the database
-        const comment = await comment.bulkCreate(commentSeed); //insert the data from the json file into the database
+        //const comment = await comment.bulkCreate(commentSeed); //insert the data from the json file into the database
     }
     catch (err) { // if there is an error, console log the error
         console.log(err);
