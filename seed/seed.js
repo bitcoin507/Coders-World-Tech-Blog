@@ -1,9 +1,9 @@
 // variables for the seed
 //import the data from the json file to be used in the database using fs module to read the file 
-const categorySeed = require('./seed/cattegorySeedData.json');
-const commentSeed = require('./seed/commentSeedData.json');
-const userSeed = require('./seed/userSeedData.json');
-const blogSeed = require('./seed/blogSeedData.json');
+const categorySeed = require('./categorySeedData.json');
+const commentSeed = require('./commentSeedData.json');
+const userSeed = require('./userSeedData.json');
+const blogSeed = require('./blogSeedData.json');
 
 //test this function to see if it works
 //const { title, comment } = commentSeed[0]; //get the title and comment from the commentSeedData.json file and deconstruct the object
@@ -17,8 +17,8 @@ const sequelize = require('../config/connection'); //import the connection to be
 async function seed() {  //async function to seed the database
     try {
         await sequelize.sync({ force: true }); //sync the database
-        const category = await category.bulkCreate(categorySeed); //insert the data from the json file into the database
         const user = await user.bulkCreate(userSeed); //insert the data from the json file into the database
+        const category = await category.bulkCreate(categorySeed); //insert the data from the json file into the database
         const blog = await blog.bulkCreate(blogSeed); //insert the data from the json file into the database
         const comment = await comment.bulkCreate(commentSeed); //insert the data from the json file into the database
     }
