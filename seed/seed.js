@@ -1,9 +1,9 @@
 // variables for the seed
 //import the data from the json file to be used in the database using fs module to read the file 
-const categorySeed = require('./seed/cattegorySeedData.json');
+const categorySeed = require('./categorySeedData.json');
 const commentSeed = require('./seed/commentSeedData.json');
-const userSeed = require('./seed/userSeedData.json');
-const blogSeed = require('./seed/blogSeedData.json');
+const userSeed = require('./userSeedData.json');
+const blogSeed = require('./blogSeedData.json');
 
 //test this function to see if it works
 //const { title, comment } = commentSeed[0]; //get the title and comment from the commentSeedData.json file and deconstruct the object
