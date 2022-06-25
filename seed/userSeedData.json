@@ -1,14 +1,22 @@
 [
-    {
-      "name": "",
-      "email": ""
-    },
-    {
-      "name": "",
-      "email": ""
-    },
-    {
-      "name": "",
-      "email": ""
-    }
-  ]
+  {
+    "user": "Tamin",
+    "email": "taztheraz@hotmail.com",
+    "password": "password12345"
+  },
+  {
+    "name": "Matteo",
+    "email": "fester@gmail.com",
+    "password": "password12345"
+  },
+  {
+    "name": "Selina",
+    "email": "crazyhazy@aol.com",
+    "password": "password12345"
+  },
+  {
+    "name": "Jason",
+    "email": "digitaloverlord@aol.com",
+    "password": "password12345"
+  }
+]
