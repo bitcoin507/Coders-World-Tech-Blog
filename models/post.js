@@ -16,7 +16,7 @@ Post.init(
       allowNull: false,
     },
     content: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     author_id: {
@@ -24,6 +24,14 @@ Post.init(
       allowNull: false,
       references: {
         model: 'user',
+        key: 'id',
+      }
+    },
+    category_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'category',
         key: 'id',
       }
     }
