@@ -20,12 +20,11 @@
         </div>
         
            <h3>Read our most popular blogs.</h3>
-            {{#each populars as |popular|}}
+            {{#each popular as |popular|}}
               <div class="card">
             <h4>{{popular.title}}</h2>
             <h5>{{popular.created_at}}</h5>
             <img class="banner" src="./assets/images/{{popular.image}}">
-            <p>Some text..</p>
             <p>{{popular.content}}</p>
             <a href="#">READ MORE</a>
         </div>

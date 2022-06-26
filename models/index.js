@@ -5,8 +5,8 @@ const Post = require('./Post');
 const Popular = require('./Popular');
 
 Popular.belongsTo(User, { 
-  foreignKey: 'author_id',
-  targetKey: 'id' 
+  foreignKey: 'user_id',
+   
   
 } );
 
@@ -21,7 +21,7 @@ Popular.belongsTo(Post, {
   } );
 
 Popular.hasMany(Comment, {
-  foreignKey: 'post_id',
+  foreignKey: 'popular_id',
   onDelete: 'CASCADE',
   targetKey: 'id'
   
@@ -34,17 +34,17 @@ Category.hasMany(Popular, {
 
 
 Post.belongsTo(Category, {
-  foreignKey: 'popular_id',
+  foreignKey: 'category_id',
   onDelete: 'CASCADE',
 });
 
 Category.hasMany(Post, {
-  foreignKey: 'post_id',
+  foreignKey: 'category_id',
   onDelete: 'CASCADE',
 });
 
 User.hasMany(Popular, {
-  foreignKey: 'author_id',
+  foreignKey: 'user_id',
   onDelete: 'CASCADE',
 } );
 
