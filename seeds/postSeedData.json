@@ -1,44 +1,36 @@
 [
     {
-        "title": "This is my first blog post",
-        "content": "ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+        "title": "Best Paying Programming Languages",
+        "content": " Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.",
         "image": "cidong.png",
         "author_id": 1,
-        "category_id": 2
+        "category_id": 2,
+        "created_at": "2017-01-01 00:00:00"
     },
     {
-        "title": "This is my second blog post",
-        "content": "ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-        "image": "cidong.png",
+        "title": "Javascript for Dummies",
+        "content": "Master your language with lessons, quizzes, and projects designed for real-life scenarios. Take your skills to a new level and join millions of users that have learned Javascript.",
+        "image": "jsimg.png",
         "author_id": 2,
-        "category_id": 3
+        "category_id": 3,
+        "created_at": "2022-01-01 01:10:01"
     },
     {
         "title": "How to write an awesome full stack web aplication",
-        "content": "ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-        "image": "cidong.png",
+        "content": "Understanding the market demand for full-stack web app development, here we have created an article to show you how to combine the basic knowledge of these technologies in both to create a full-stack web app ready for deployment.",
+        "image": "fullstack.png",
         "author_id": 1,
-        "category_id": 3
+        "category_id": 3,
+        "created_at": "2022-02-02 00:00:00"
     },
     {
         "title": "Web App vs Mobile App",
-        "content": "ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-        "image": "cidong.png",
+        "content": "If you're planning to establish a mobile presence for your business or organization one of the first considerations that will likely come to mind is whether you want to create a mobile application for users to download (app) or a mobile website, or perhaps both.",
+        "image": "webVsMobile.jfif",
         "author_id": 2,
-        "category_id": 3
-    },
-    {
-        "title": "What is the difference between a Front-end and a Back-end developer?",
-        "content": "ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-        "image": "cidong.png",
-        "author_id": 1,
-        "category_id": 2
-    },
-    {
-        "title": "Who is Dennis Brown anyway?",
-        "content": "ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-        "image": "cidong.png",
-        "author_id": 1,
-        "category_id": 4
+        "category_id": 3,
+        "created_at": "2019-07-07 07:00:00"
     }
+  
+   
 ]

@@ -4,6 +4,7 @@ const { User, Category, Comment, Post } = require('../models');
 const categorySeed = require('./categorySeedData.json');
 const userSeed = require('./userSeedData.json');
 const postSeed = require('./postSeedData.json');
+const commentSeed = require('./commentSeedData.json');
 
 const sequelize = require('../config/connection'); //import the connection to be used in the database  
 

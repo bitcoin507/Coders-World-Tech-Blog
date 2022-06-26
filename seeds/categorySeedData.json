@@ -1,14 +1,18 @@
 [
     {
-        "name": "Lifestyle"
+        "name": "LJavascript"
     },
     {
-        "name": "Tech"
+        "name": "CSS"
     },
     {
-        "name": "Health and Wellness"
+        "name": "Career Help"
     },
     {
         "name": "Finance and Business"
+    },
+    {
+        "name": "Most Popular"
     }
+    
 ]
