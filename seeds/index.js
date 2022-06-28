@@ -4,7 +4,7 @@ const { User, Category, Post,Popular} = require('../models');
 const categorySeed = require('./categorySeedData.json');
 const userSeed = require('./userSeedData.json');
 const postSeed = require('./postSeedData.json');
-const popularSeed= require('./popularPost.json');
+const popularSeed= require('./popularSeedData.json');
 
 
 const sequelize = require('../config/connection'); //import the connection to be used in the database  
