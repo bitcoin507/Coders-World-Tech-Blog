@@ -23,8 +23,7 @@ router.get('/', async (req, res) => {
     // Serialize data so the template can read it
     const posts = postData.map((post) => post.get({ plain: true }));
 
-    router.get('/', async (req, res) => {
-      try {
+   
         // Get all posts and JOIN with user data
         const popularPostsData = await Post.findAll({
           order: 
