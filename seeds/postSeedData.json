@@ -5,15 +5,9 @@
         "image": "cidong.png",
         "author_id": 1,
         "category_id": 2,
-        "created_at": "2017-01-01 00:00:00",
         "likes": 6,
         "dislikes": 2,
-        "comments":["Thanks so much", 
-        "I loved it", 
-        "I think you should read it", 
-        "Loved it!",
-        "Highly recommended!"
-        ]
+        "comments": ""
     },
     {
         "title": "Javascript for Dummies",
@@ -21,15 +15,9 @@
         "image": "jsimg.png",
         "author_id": 2,
         "category_id": 3,
-        "created_at": "2022-01-01 01:10:01",
         "likes": 9,
         "dislikes": 3,
-        "comments":["Great addition to any collection.", 
-            "Best article I have read this year", 
-            "My dad loves it", 
-            "Not worth my 30 mins",
-            "Thanks so much for sharing"
-            ]
+        "comments": ""
     },
     {
         "title": "How to write an awesome full stack web aplication",
@@ -37,14 +25,9 @@
         "image": "fullstack.png",
         "author_id": 1,
         "category_id": 3,
-        "created_at": "2022-02-02 00:00:00",
         "likes": 8,
         "dislikes": 6,
-        "comments":["Best of uck to anyone reading this", 
-            "First!", 
-            "Poory written",
-            "Highly recommended!"
-            ]
+        "comments": ""
     },
     {
         "title": "Web App vs Mobile App",
@@ -52,16 +35,8 @@
         "image": "webVsMobile.jfif",
         "author_id": 2,
         "category_id": 3,
-        "created_at": "2019-07-07 07:00:00",
         "likes": 11,
         "dislikes": 3,
-        "comments":["Very complex article,a bit hard to follow", 
-            "Had to read 3 times to fully understnd", 
-            "What??", 
-            "Could have been better",
-            "I am a goat"
-            ]
+        "comments": ""
     }
-  
-   
 ]

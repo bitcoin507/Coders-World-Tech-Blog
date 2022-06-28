@@ -19,28 +19,10 @@ Post.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    likes: {  
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      defaultValue: 0,
-    },  
-    dislikes: {  
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      defaultValue: 0,
-    },
-    comments: {  
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      defaultValue: 0,
-    },
-
-
     image: {
-      type:DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
     },
-    
     author_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -56,7 +38,22 @@ Post.init(
         model: 'category',
         key: 'id',
       }
-    }
+    },
+    likes: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0,
+    },
+    dislikes: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0,
+    },
+    comments: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      defaultValue: 0,
+    },
   },
   {
     sequelize,
