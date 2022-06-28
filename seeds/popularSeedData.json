@@ -8,12 +8,8 @@
         "created_at": "2020-01-01 00:00:00",
         "likes": 25,
         "dislikes": 2,
-        "comments": ["Please make this an annual update",
-             "Why??",
-             "I love turtles!!",
-             "Really in depth discussion about turtles",
-             "Looking forward to the next installment!"
-            ]
+        "comments": ""
+             
 
         
     },
@@ -27,12 +23,9 @@
         "created_at": "2021-01-01 07:01:07",
         "likes": 21,
         "dislikes": 2,
-        "comments": ["I love coding!",
-             "Thanks so much!",
-             "Will you marry me?",
-             "I hate turtles!!"
-            ]
-    },
+        "comments": ""
+            
+    }
 
     {
         "title": "Learn SQL",
@@ -43,11 +36,8 @@
         "created_at": "2019-06-03 12:11:00",
         "likes": 16,
         "dislikes": 5,
-        "comments": ["I love SQL!",
-             " A so di ting set man!",
-             "No entiendo la mas minima parte de este articulo",
-             "I am an alien.We have what we need now."
-            ]
+        "comments": ""
+            
     }
 
 

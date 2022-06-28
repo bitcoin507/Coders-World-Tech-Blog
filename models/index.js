@@ -1,6 +1,6 @@
 const User = require('./User');
 const Category = require('./Category');
-const Post = require('./Post');
+const Post = require('./popularPost');
 const Popular = require('./Popular');
 
 
