@@ -1,4 +1,4 @@
-const { User, Category, Comment, Post,Like } = require('../models');
+const { User, Category, Post,Popular} = require('../models');
 
 // variables for the seed
 const categorySeed = require('./categorySeedData.json');

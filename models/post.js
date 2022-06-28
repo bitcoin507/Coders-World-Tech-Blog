@@ -29,7 +29,7 @@ Post.init(
       allowNull: false,
       defaultValue: 0,
     },
-    comments: {  //number of comments
+    comments: {  
       type: DataTypes.INTEGER,
       allowNull: false,
       defaultValue: 0,
@@ -40,6 +40,7 @@ Post.init(
       type:DataTypes.TEXT,
       allowNull: false,
     },
+    
     author_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
