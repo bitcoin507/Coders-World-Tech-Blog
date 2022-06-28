@@ -37,7 +37,7 @@ Post.init(
 
 
     image: {
-      type: DataTypes.TEXT,
+      type:DataTypes.TEXT,
       allowNull: false,
     },
     author_id: {
