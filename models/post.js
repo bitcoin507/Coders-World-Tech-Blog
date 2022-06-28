@@ -19,6 +19,23 @@ Post.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
+    likes: {  
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0,
+    },  
+    dislikes: {  
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0,
+    },
+    comments: {  //number of comments
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0,
+    },
+
+
     image: {
       type: DataTypes.TEXT,
       allowNull: false,
