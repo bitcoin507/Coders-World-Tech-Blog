@@ -54,7 +54,7 @@ function validateEmail(input, requiredMsg, invalidMsg) {
 	return true;
 }
 
-const form = document.querySelector("#signup");
+const form = document.getElementById("signUp");
 
 const NAME_REQUIRED = "Please enter your name";
 const EMAIL_REQUIRED = "Please enter your email";
@@ -72,5 +72,3 @@ form.addEventListener("submit", function (event) {
 		alert("Demo only. No form was posted.");
 	}
 });
-
-
