@@ -21,12 +21,12 @@ router.get('/', async (req, res) => {
     const popularPostsData = await Post.findAll({
       order: [
         ['likes', 'DESC'],
-    
+
       ],
       limit: 3,
     });
 
-    console.log(popularPostsData)
+    //console.log(popularPostsData)
 
     // Serialize data so the template can read it
     const popularPosts = popularPostsData.map((post) => post.get({ plain: true }));
