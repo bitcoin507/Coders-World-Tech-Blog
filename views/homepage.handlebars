@@ -7,7 +7,7 @@
             <h5>{{post.created_at}}</h5>
             <img class="banner" src="./assets/images/{{post.image}}">
             <p>{{post.content}}</p>
-            <a href="#">READ MORE</a>
+            <a href="/post/{{post.id}}">READ MORE</a>
         </div>
         {{/each}}
     </div>
@@ -18,18 +18,18 @@
             <p>Welcome to the Coder's World Community. We love coding.Feel free to submit your article for review.
             </p>
         </div>
-        
-           <h3>Read our most popular blogs.</h3>
-            {{#each popularPosts as |popularPost|}}
-              <div class="card">
+
+        <h3>Read our most popular blogs.</h3>
+        {{#each popularPosts as |popularPost|}}
+        <div class="card">
             <h4>{{popularPost.title}}</h2>
-            <h5>{{popularPost.created_at}}</h5>
-            <img class="banner" src="./assets/images/{{popularPost.image}}">
-            <p>{{popularPost.content}}</p>
-            <a href="#">READ MORE</a>
+                <h5>{{popularPost.created_at}}</h5>
+                <img class="banner" src="./assets/images/{{popularPost.image}}">
+                <p>{{popularPost.content}}</p>
+                <a href="/post/{{popularPost.id}}">READ MORE</a>
         </div>
-        {{/each}}   
-        
+        {{/each}}
+
 
     </div>
 </div>
