@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { User, Post } = require('../../models');
 
 //create post 
-router.post('/:post', async (req, res) => {
+router.post('/post', async (req, res) => {
   try {
     const savePost = await new Post(req.body);
     const savedPost = await savePost.save()
@@ -14,10 +14,10 @@ router.post('/:post', async (req, res) => {
 
 })
 //update post
-router.put('/:update', async (req, res) => {
+router.put('/update', async (req, res) => {
   try {
-    const post = await Post.findById(req.params.id);
-    if (post.userId === req.body.userId) {
+    const update = await Post.findById(req.params.id);
+    if (update.userId === req.body.userId) {
       await Post.updateOne({ $set: req.body });
       res.status(200).json('it has been updated');
 
@@ -32,14 +32,14 @@ router.put('/:update', async (req, res) => {
 
 
 //delete post 
-router.delete('/:delete', async (req, res) => {
+router.delete('/delete', async (req, res) => {
   try {
-    const post = await Post.findById(req.params.id);
-    if (post.userId === req.body.userId) {
+    const deletepost = await Post.findById(req.params.id);
+    if (deletepost.userId === req.body.userId) {
       await Post.deleteOne()
       res.status(200).json(' post sucessfully deleted')
     } else {
-      res.status(403).json("you can only updateor delete your post")
+      res.status(403).json("you can only update or delete your post")
     }
   } catch (error) {
     res.status(500).json(error)
@@ -48,9 +48,9 @@ router.delete('/:delete', async (req, res) => {
 })
 
 //like post
-router.put('/:like', async (req, res) => {
+router.put('/like', async (req, res) => {
   try {
-    const post = await Post.findById(req.params.id);
+    const like = await Post.findById(req.params.id);
     await Post.updateOne({ $set: req.body });
     res.status(200).json('like registered');
 
@@ -61,9 +61,9 @@ router.put('/:like', async (req, res) => {
 })
 
 //disLike post
-router.put('/:dislike', async (req, res) => {
+router.put('/dislike', async (req, res) => {
   try {
-    const post = await Post.findById(req.params.id);
+    const dislike = await Post.findById(req.params.id);
     await Post.updateOne({ $set: req.body });
     res.status(200).json('dis-like registered');
 
@@ -74,9 +74,9 @@ router.put('/:dislike', async (req, res) => {
 })
 
 //Leave a comment
-router.put('/:comment', async (req, res) => {
+router.put('/comment', async (req, res) => {
   try {
-    const post = await Post.findById(req.params.id);
+    const comment = await Post.findById(req.params.id);
     await Post.updateOne({ $set: req.body });
     res.status(200).json('comment registered');
 
@@ -101,7 +101,7 @@ router.get('/search', async (req, res) => {
 })
 
 //get posts by title 
-router.get('/:id', async (req, res) => {
+router.get('/id', async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
     res.status(200).json(post);
@@ -111,16 +111,7 @@ router.get('/:id', async (req, res) => {
   }
 })
 
-//get  posts by user name 
-router.get('/:postByUser', async (req, res) => {
-  try {
-    const post = await Post.findById(req.params.id);
-    res.status(200).json(post);
 
-  } catch (error) {
-    res.status(500).json(error);
-  }
-})
 
 
 

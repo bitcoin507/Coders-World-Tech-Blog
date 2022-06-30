@@ -21,7 +21,9 @@ router.get('/', async (req, res) => {
     const popularPostsData = await Post.findAll({
       order: [
         ['likes', 'DESC'],
+    
       ],
+      limit: 3,
     });
 
     console.log(popularPostsData)
