@@ -62,7 +62,7 @@ const onSignUp = async (event) => {
     alert(response.error);
 
     // Redirect to whereever you want them to go once they've signed up
-    //window.location.href = '/';
+    window.location.href = '/';
   }
 }
 

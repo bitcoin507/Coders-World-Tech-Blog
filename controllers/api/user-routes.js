@@ -2,7 +2,7 @@ const router = require('express').Router();
 const bcrypt = require('bcrypt');
 const User = require('../../models/User');
 
-// CREATE a new user
+/* CREATE a new user
 router.post('/signup', async (req, res) => {
 
   console.log('req.body: ', req.body);
@@ -28,7 +28,48 @@ router.post('/signup', async (req, res) => {
   } catch (err) {
     res.status(400).json(err);
   }
-});
+}); */
+
+
+
+
+// CREATE a new user
+router.post('/', async (req, res) => {
+  try{
+      //Check if the user already exists
+      const user = await User.findOne({ 
+        where: { 
+          email: req.body.username,
+        },
+      });
+        if (user) {
+          res .status(400).json({message:'this user or email already exist'});
+          return;
+        }
+        else {
+          
+          const salt = await bcrypt.genSalt(10);
+         // hash the password from 'req.body' and save to user
+          user.password = await bcrypt.hash(req.body.password, 10);
+          salt = await bcrypt.genSalt(10);
+         // create the newUser with the hashed password and save to DB
+          const dbUserData  = await User.create(req.body);
+
+        req.session.save(() => {
+          req.session.logged_in = true;
+          res.status(200).json(dbUserData);
+        });
+        } 
+      } catch (err) { 
+        res.status(400).json(err);  
+      }     
+} );    
+     
+ 
+  
+
+          
+  
 
 //Login
 router.post('/login', async (req, res) => {
