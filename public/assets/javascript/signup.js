@@ -14,9 +14,12 @@ function onCloseModal() {
 
 function myFunction(x) {
   x.classList.toggle("fa-thumbs-down");
-}
+};
 
-function onSignUp() {
+const onSignUp = async (event) => {
+
+  console.log('Loading the Sign Up page...');
+  event.preventDefault();
 
   // Close the Modal
   onCloseModal();
@@ -40,7 +43,8 @@ function onSignUp() {
   }
 
   // Send the form data to the server
-  const newUser = await fetch('/signUp', {
+  console.log(formData)
+  const response = await fetch('/api/user/signup', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -49,15 +53,20 @@ function onSignUp() {
   })
 
   // Get the response from the server
-  const response = await newUser.json();
-  console.log(response);
-  if (response.error) {
-    alert(response.error);
+  console.log('Geting Response')
+  //const response = await newUser.json();
+  if (response.ok) {
+    console.log('User created');
   }
   else {
-    console.log('User created');
+    alert(response.error);
 
     // Redirect to whereever you want them to go once they've signed up
-    window.location.href = '/';
+    //window.location.href = '/';
   }
 }
+
+const signupButton = document.getElementById('signupButton');
+signupButton.addEventListener('click', onSignUp);
+
+
