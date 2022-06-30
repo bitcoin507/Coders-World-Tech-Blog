@@ -34,7 +34,7 @@ const onSignUp = async (event) => {
   }
 
   // validate the form data
-  if (formData.email == "" || formData.psw == "" || formData.pswrepeat == "") {
+  if (formData.email == "" || formData.psw == "" || formData.pswrepeat == "" || formData.username == "") {
     alert("Please fill in all fields");
     return;
   }
