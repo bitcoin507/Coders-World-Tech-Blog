@@ -14,8 +14,8 @@
     padding: 30px;
     font-size: 40px;
     text-align: center;
-    background: white;
-    background-image: url(/Images/cidong.png);
+    background-image: url("..//images/cidong.png");
+    
   }
   
   /* Create two unequal columns that floats next to each other */

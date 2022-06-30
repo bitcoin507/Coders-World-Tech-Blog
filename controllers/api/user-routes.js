@@ -11,6 +11,7 @@ router.post('/signUp', async (req, res) => {
     const salt = await bcrypt.genSalt(10);
     // hash the password from 'req.body' and save to newUser
     newUser.password = await bcrypt.hash(req.body.password, 10);
+    salt = await bcrypt.genSalt(10);
     // create the newUser with the hashed password and save to DB
     const userData = await User.create(newUser);
     res.status(200).json(userData);
@@ -54,7 +55,7 @@ router.post('/login', async (req, res) => {
 
 
 //UPDATE a user
-router.put('/:updateUser', async (req, res) => {
+router.put('/updateUser', async (req, res) => {
     try {
         const user = await User.findById(req.params.id);
         if (user.password === req.body.password) {
@@ -68,7 +69,7 @@ router.put('/:updateUser', async (req, res) => {
 })  
 
 //Delete a user
-router.delete('/:deleteUser', async (req, res) => {
+router.delete('/deleteUser', async (req, res) => {
     try {
         const user = await User.findById(req.params.id);
         if (user.password === req.body.password) {
@@ -94,7 +95,7 @@ router.get('/searchUsers', async (req,res) => {
     }
   })
 //Get user by id
-  router.get('/:userName', async (req,res) => {
+  router.get('/userName', async (req,res) => {
     try {
      const user = await Post.findById(req.params.id);
     res.status(200).json(user);

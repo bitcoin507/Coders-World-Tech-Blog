@@ -17,11 +17,13 @@ router.get('/', async (req, res) => {
     // Serialize data so the template can read it
     const posts = postData.map((post) => post.get({ plain: true }));
 
-    // Get all posts and JOIN with user data
+    // Get all popular posts and JOIN with user data
     const popularPostsData = await Post.findAll({
       order: [
         ['likes', 'DESC'],
+    
       ],
+      limit: 3,
     });
 
     console.log(popularPostsData)
