@@ -28,7 +28,9 @@ const onSignUp = async (event) => {
   var formData = {
     email: document.getElementById("email").value,
     psw: document.getElementById("psw").value,
-    pswrepeat: document.getElementById("pswrepeat").value
+    pswrepeat: document.getElementById("pswrepeat").value,
+    username: document.getElementById("username").value
+    
   }
 
   // validate the form data
