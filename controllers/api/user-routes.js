@@ -12,6 +12,7 @@ router.post('/signup', async (req, res) => {
     res
       .status(400)
       .json({ message: 'User already exists' });
+      
     return;
   }
   
@@ -20,7 +21,7 @@ router.post('/signup', async (req, res) => {
         const salt = await bcrypt.genSalt(6);
         const passwordHash = await bcrypt.hash(req.body.password, salt);
         User.push({name: req.body.name, password: passwordHash});
-        res.json(users);
+        res.json(User);
     } catch (e) {
         res.status(500).send(e.toString());
     }

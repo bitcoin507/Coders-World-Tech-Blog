@@ -71,6 +71,7 @@ const onSignUp = async (event) => {
   else {
     response.json().then(data => {
       console.log('Error creating user: ', data);
+      alert(data.message);
       if (data.errors.length) {
         alert(data.errors[0].message);
       }
