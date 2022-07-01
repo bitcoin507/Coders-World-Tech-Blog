@@ -2,7 +2,7 @@
     {
         "title": "Best Paying Programming Languages",
         "content": " Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.",
-        "image": "cidong.png",
+        "image": "languages.jpg",
         "author_id": 1,
         "category_id": 2,
         "likes": 6,
@@ -22,7 +22,7 @@
     {
         "title": "How to write an awesome full stack web aplication",
         "content": "Understanding the market demand for full-stack web app development, here we have created an article to show you how to combine the basic knowledge of these technologies in both to create a full-stack web app ready for deployment.",
-        "image": "fullstack.png",
+        "image": "full-stack.jpeg",
         "author_id": 1,
         "category_id": 3,
         "likes": 8,
@@ -32,7 +32,7 @@
     {
         "title": "Web App vs Mobile App",
         "content": "If you're planning to establish a mobile presence for your business or organization one of the first considerations that will likely come to mind is whether you want to create a mobile application for users to download (app) or a mobile website, or perhaps both.",
-        "image": "webVsMobile.jfif",
+        "image": "mob-vs-web.jpeg",
         "author_id": 2,
         "category_id": 3,
         "likes": 11,

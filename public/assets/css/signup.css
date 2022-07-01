@@ -12,7 +12,6 @@ input[type=text], input[type=password] {
   display: inline-block;
   border: 5px;
   background: #f1f1f1;
-  
 }
 
 /* Add a background color when the inputs get focus */
@@ -22,7 +21,7 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 /* Set a style for all buttons */
-button {
+/* button {
   display: flex;
   background-color: #04AA6D;
   color: white;
@@ -34,7 +33,7 @@ button {
   opacity: 0.9;
   justify-content: center;
   border-radius: 5px;
-}
+} */
 
 button:hover {
   opacity:1;
@@ -52,21 +51,22 @@ button:hover {
   display: flex;
   float: left;
   width: 25%;
- justify-content: center;
+  justify-content: center;
   border-radius: 5px;
   padding: 10px;
   margin: 20px;
 } 
-.signupbtn{
+
+.signupbtn{  
   display: flex;
   float: right;
   width: 25%;
- justify-content: center;
+  justify-content: center;
   border-radius: 5px;
   padding: 10px;
   margin: 20px;
 
-}
+} 
 
 /* Add padding to container elements */
 .container {
