@@ -62,6 +62,7 @@ const onSignUp = async (event) => {
   //const response = await newUser.json();
   if (response.ok) {
     console.log('User created');
+    alert("User created");
     //window.location.href = '/';
   }
   else {
