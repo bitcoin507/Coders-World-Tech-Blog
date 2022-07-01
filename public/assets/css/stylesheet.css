@@ -16,6 +16,10 @@
     text-align: center;
     background-image: url("..//images/11.webp"); 
   }
+
+  .header h2 {
+    color: white;
+  }
   
   /* Create two unequal columns that floats next to each other */
   /* Left column */
@@ -42,24 +46,27 @@
     justify-content: center;
     align-items: center;
     margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    /* margin-top: 10px;
+    margin-bottom: 10px; */
     padding: 10px;
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
-
-    /* padding: 5px; */
-    /* border-radius: 5px; */
-    align-items: center;
+    background-color: rgba(14, 57, 186, 0.73);
+    /* padding: 14px 20px; */
+    margin: 8px 0;
+    border: none;
   }
 
-  /*.signUpBtn{
+  .signUpHomeBtn{
     display: flex;
     width: 50%;
     padding: 5px;
     border-radius: 5px;
-  }*/
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgba(14, 57, 186, 0.73); 
+  }
   
   /* Add a card effect for articles */
   .card {
