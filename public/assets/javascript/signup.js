@@ -27,19 +27,18 @@ const onSignUp = async (event) => {
   // Get the form data
   var formData = {
     email: document.getElementById("email").value,
-    psw: document.getElementById("psw").value,
-    pswrepeat: document.getElementById("pswrepeat").value,
-    username: document.getElementById("username").value
-    
+    name: document.getElementById("username").value,
+    password: document.getElementById("psw").value
   }
 
   // validate the form data
-  if (formData.email == "" || formData.psw == "" || formData.pswrepeat == "" || formData.username == "") {
+  if (formData.email == "" || formData.password == "" || formData.username == "") {
     alert("Please fill in all fields");
     return;
   }
 
-  if (formData.psw != formData.pswrepeat) {
+  console.log('Sign Up form data: ', formData);
+  if (formData.password != document.getElementById("pswrepeat").value) {
     alert("Passwords do not match");
     return;
 
@@ -63,12 +62,16 @@ const onSignUp = async (event) => {
   //const response = await newUser.json();
   if (response.ok) {
     console.log('User created');
+    //window.location.href = '/';
   }
   else {
-    alert(response.error);
-
+    response.json().then(data => {
+      console.log('Error creating user: ', data);
+      if (data.errors.length) {
+        alert(data.errors[0].message);
+      }
+    })
     // Redirect to whereever you want them to go once they've signed up
-    window.location.href = '/';
   }
 }
 

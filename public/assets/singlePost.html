@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,13 +17,12 @@
         .fa:hover {
           color: darkblue;
         }
-        </style>
+    </style>
 </head>
+
 <body>
     <header>
-        <h1>
-            {{Blog Title}}
-        </h1>
+        <h1>{{Blog Title}}</h1>
         <h4>{{Author}}</h4>
         <h6>{{Date published}}</h6>
     </header>
@@ -32,14 +32,14 @@
     <br>
 
     <textarea id="otherUsersBlogs" name="otherUsersBlogs" cols="120" rows="30"></textarea>
-    <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>Leave a like or dislike
+    <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i> <!--Leave a like or dislike--> <!--should this not be in a p tag?-->
     <h3>Likes: {{likeCount}}</h3>
     
     <form class="commentField" action="">
     <h4>Leave comment below</h4>
-        <textarea id="commentField" name="commentField" cols="50" rows="10"></textarea>
+    <textarea id="commentField" name="commentField" cols="50" rows="10"></textarea>
 
-    <h3>Comments </h3>
+    <h3>Comments</h3>
     {{Comments}}
 
     <script src="./javascript/signup.js"></script>

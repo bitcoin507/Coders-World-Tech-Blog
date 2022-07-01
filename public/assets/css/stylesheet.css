@@ -14,8 +14,7 @@
     padding: 30px;
     font-size: 40px;
     text-align: center;
-    background-image: url("..//images/cidong.png");
-    
+    background-image: url("..//images/11.webp"); 
   }
   
   /* Create two unequal columns that floats next to each other */
@@ -32,7 +31,6 @@
     padding-left: 20px;
   }
   
-  
   .minibanner {
     background-color: #aaa;
     width: 100%;
@@ -40,10 +38,20 @@
   }
   .postBtn{
     display: flex;
-    width: 100%;
-    padding: 5px;
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
     border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
 
+    /* padding: 5px; */
+    /* border-radius: 5px; */
+    align-items: center;
   }
 
   /*.signUpBtn{
