@@ -42,7 +42,11 @@ const onSignUp = async (event) => {
   if (formData.psw != formData.pswrepeat) {
     alert("Passwords do not match");
     return;
+
+    
   }
+  
+  
 
   // Send the form data to the server
   console.log(formData)
