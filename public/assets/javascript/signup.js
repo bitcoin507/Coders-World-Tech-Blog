@@ -28,7 +28,8 @@ const onSignUp = async (event) => {
   var formData = {
     email: document.getElementById("email").value,
     name: document.getElementById("username").value,
-    password: document.getElementById("psw").value
+    password: document.getElementById("psw").value,
+    username: document.getElementById("username").value
   }
 
   // validate the form data
@@ -44,6 +45,8 @@ const onSignUp = async (event) => {
 
     
   }
+
+ 
   
   
 
@@ -78,5 +81,3 @@ const onSignUp = async (event) => {
 
 const signupButton = document.getElementById('signupButton');
 signupButton.addEventListener('click', onSignUp);
-
-
