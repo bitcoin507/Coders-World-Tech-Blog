@@ -2,69 +2,71 @@ const router = require('express').Router();
 const bcrypt = require('bcrypt');
 const User = require('../../models/User');
 
-/* CREATE a new user
+// CREATE a new user
 router.post('/signup', async (req, res) => {
 
   console.log('req.body: ', req.body);
-  const confirm = await User.find({ Username: req.body.username, email: req.body.email })
-  confirm && res.status(400).json('this user or email already exist');
+  const userData = await User.findOne({ where: { email: req.body.email } });
+  if (userData) {
+    console.log('New already exists :-(');
+    res
+      .status(400)
+      .json({ message: 'User already exists' });
+    return;
+  }
+
   try {
-    const newUser = req.body;
-    const salt = await bcrypt.genSalt(10);
-    // hash the password from 'req.body' and save to newUser
-    newUser.password = await bcrypt.hash(req.body.password, 10);
-    salt = await bcrypt.genSalt(10);
-    // create the newUser with the hashed password and save to DB
-    const userData = await User.create(newUser);
+    const newUser = await User.create(req.body);
+
+    console.log('New User Created: ', req.body);
 
     // Saving Sessions
     req.session.save(() => {
+      console.log('Saving Session for New User: ', newUser.id);
       req.session.logged_in = true;
-      req.session.user_id = userData.id;
+      req.session.user_id = newUser.id;
 
-      res.status(200).json(userData);
+      res.status(200).json(newUser);
     });
 
   } catch (err) {
+    console.warn('Error creating new user: ', err);
     res.status(400).json(err);
   }
-}); */
-
-
-
+});
 
 // CREATE a new user
 router.post('/', async (req, res) => {
-  try{
-      //Check if the user already exists
-      const user = await User.findOne({ 
-        where: { 
-          email: req.body.username,
-        },
-      });
-        if (user) {
-          res .status(400).json({message:'this user or email already exist'});
-          return;
-        }
-        else {
-          
-          const salt = await bcrypt.genSalt(10); 
-         // hash the password from 'req.body' and save to user
-          user.password = await bcrypt.hash(req.body.password, 10);
-          salt = await bcrypt.genSalt(10);
-         // create the newUser with the hashed password and save to DB
-          const dbUserData  = await User.create(req.body);
+  try {
+    //Check if the user already exists
+    const user = await User.findOne({
+      where: {
+        email: req.body.username,
+      },
+    });
+    if (user) {
+      res.status(400).json({ message: 'this user or email already exist' });
+      return;
+    }
+    else {
 
-        req.session.save(() => {
-          req.session.logged_in = true;
-          res.status(200).json(dbUserData);
-        });
-        } 
-      } catch (err) { 
-        res.status(400).json(err);  
-      }     
-} );    
-     
+      const salt = await bcrypt.genSalt(10);
+      // hash the password from 'req.body' and save to user
+      user.password = await bcrypt.hash(req.body.password, 10);
+      salt = await bcrypt.genSalt(10);
+      // create the newUser with the hashed password and save to DB
+      const dbUserData = await User.create(req.body);
+
+      req.session.save(() => {
+        req.session.logged_in = true;
+        res.status(200).json(dbUserData);
+      });
+    }
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
 //Login
 router.post('/login', async (req, res) => {
   try {
