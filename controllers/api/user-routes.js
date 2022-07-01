@@ -48,7 +48,7 @@ router.post('/', async (req, res) => {
         }
         else {
           
-          const salt = await bcrypt.genSalt(10);
+          const salt = await bcrypt.genSalt(10); 
          // hash the password from 'req.body' and save to user
           user.password = await bcrypt.hash(req.body.password, 10);
           salt = await bcrypt.genSalt(10);
@@ -65,12 +65,6 @@ router.post('/', async (req, res) => {
       }     
 } );    
      
- 
-  
-
-          
-  
-
 //Login
 router.post('/login', async (req, res) => {
   try {
@@ -101,10 +95,6 @@ router.get('/logout', (req, res) => {
   res.status(200).json({ message: 'Logged out successfully' });
 })
 
-
-
-
-
 //UPDATE a user
 router.put('/updateUser', async (req, res) => {
   try {
@@ -134,8 +124,6 @@ router.delete('/deleteUser', async (req, res) => {
     res.status(500).json(error)
   }
 })
-
-
 
 //get All users
 router.get('/searchUsers', async (req, res) => {
