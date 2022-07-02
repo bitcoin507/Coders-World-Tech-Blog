@@ -1,9 +1,7 @@
 //Signup Modal Logic
 
 // Get the signup modal
-var modal = document.getElementById('id01');  
-
-
+var modal = document.getElementById('id01');
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
@@ -32,11 +30,8 @@ const onSignUp = async (event) => {
   var formData = {
     email: document.getElementById("email").value,
     password: document.getElementById("psw").value,
-    username: document.getElementById("username").value
+    name: document.getElementById("username").value
   }
-
- 
-
 
   // validate the form data
   if (formData.email == "" || formData.password == "" || formData.username == "") {
@@ -48,13 +43,7 @@ const onSignUp = async (event) => {
   if (formData.password != document.getElementById("pswrepeat").value) {
     alert("Passwords do not match");
     return;
-
-    
   }
-
- 
-  
-  
 
   // Send the form data to the server
   console.log(formData)
@@ -125,10 +114,8 @@ const onSignIn = async (event) => {
   var logInData = {
     email: document.getElementById("emailB").value,
     password: document.getElementById("pswB").value,
-    username: document.getElementById("usernameB").value
+    name: document.getElementById("usernameB").value
   }
-
- 
 
 
   // validate the ;ogIn data
@@ -137,21 +124,9 @@ const onSignIn = async (event) => {
     return;
   }
 
-  console.log('log In form data: ', logInData);
-  if (logInData.password != document.getElementById("pswrepeatB").value) {
-    alert("Passwords do not match");
-    return;
-
-    
-  }
-
- 
-  
-  
-
   // Send the form data to the server
   console.log(logInData)
-  const response = await fetch('/api/user/logIn', {
+  const response = await fetch('/api/user/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

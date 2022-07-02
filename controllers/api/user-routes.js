@@ -12,25 +12,12 @@ router.post('/signup', async (req, res) => {
     res
       .status(400)
       .json({ message: 'User already exists' });
-      
+
     return;
   }
-  
-  router.post('/signup', async (req, res) => {
-    try {
-        const salt = await bcrypt.genSalt(6);
-        const passwordHash = await bcrypt.hash(req.body.password, salt);
-        User.push({name: req.body.name, password: passwordHash});
-        res.json(User);
-    } catch (e) {
-        res.status(500).send(e.toString());
-    }
-});
-  
-  
-  
+
   try {
-   
+
     const newUser = await User.create(req.body);
 
     console.log('New User Created: ', req.body);
@@ -68,9 +55,14 @@ router.post('/login', async (req, res) => {
       res.status(400).json({ message: 'Invalid Credentials' });
       return;
     }
-    req.session.logged_in = true;
-    req.session.user_id = userData.id;
-    res.status(200).json(userData);
+    // Saving Sessions
+    req.session.save(() => {
+      console.log('Saving Session for New User: ', newUser.id);
+      req.session.logged_in = true;
+      req.session.user_id = newUser.id;
+
+      res.status(200).json(userData);
+    });
   } catch (err) {
     res.status(500).json(err);
   }
