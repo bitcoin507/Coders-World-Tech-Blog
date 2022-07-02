@@ -20,23 +20,22 @@
     </button>
     <br>
 
-    {{#if logged_in}}
+    {{#if loggedIn}}
     <a href="/dashboard" class="link">My Articles</a>
-    <a href="/logout" class="link" id="signout">Sign out</a>
+    <a href="#" class="link" id="signout">Sign out</a>
     {{else}}
     <button onclick="document.getElementById('id01').style.display='block'" style="width:100%;">
         <h3> Click here to sign up</h3>
     </button>
 
-    <button onclick="document.getElementById('id02').style.display='block'" style="width:100%;">
+     <button onclick="document.getElementById('id02').style.display='block'" style="width:100%;">
         <h3> Click here to log in</h3>
     </button>
     {{/if}}
 
 
     <div id="id01" class="modal">
-        <span onclick="document.getElementById('id01').style.display='none'" class="close"
-            title="Close Modal">&times;</span>
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
         <form class="modal-content" action="">
             <div class="container">
                 <h1>Sign Up</h1>
@@ -45,7 +44,7 @@
 
                 <label for="username"><b>Username</b></label>
                 <input type="text" placeholder="Enter desired username" id="username" required>
-
+                
                 <label for="email"><b>Email</b></label>
                 <input type="text" placeholder="Enter Email" id="email" required>
 
@@ -78,11 +77,17 @@
                 <p>Please enter user details to log in.</p>
                 <hr>
 
+                <label for="username"><b>Username</b></label>
+                <input type="text" placeholder="Enter username" id="usernameB" required>
+            
                 <label for="email"><b>Email</b></label>
                 <input type="text" placeholder="Enter Email" id="emailB" required>
 
                 <label for="psw"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" id="pswB" required>
+
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" id="pswrepeatB" required>
 
                 <label>
                     <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
@@ -90,7 +95,7 @@
 
                 <div class="clearfix">
                     <button type="button" onclick="onCloseModal()" class="cancelbtn">Cancel</button>
-                    <button type="submit" class="signupbtn" onclick="onSignIn()">Log In</button>
+                 <button type="submit" class="signInbtn" onclick="onSignIn()">Sign In</button>
                 </div>
             </div>
         </form>
